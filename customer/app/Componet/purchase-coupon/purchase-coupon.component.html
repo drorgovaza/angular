@@ -1,0 +1,15 @@
+<form class="form-horizontal" style="margin-left: 20px">
+  <div class="form-group">
+      <label for="couponId" class="control-label col-sm-2">Coupon Id</label>
+      <div class="col-sm-6">
+          <input class="form-control" placeholder="Insert A Coupon ID To Purchase Coupon"
+                  type="text" name="idtoget" [(ngModel)] = "idtoget" /> 
+      </div>
+  </div>
+<br>
+  <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+            <button (click) = "purchaseCoupon()" class="btn btn-primary btn-lg">Purchase <span class="glyphicon glyphicon-shopping-cart"></span></button>
+            </div>
+  </div>
+</form>
