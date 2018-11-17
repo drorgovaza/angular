@@ -1,0 +1,79 @@
+<form class="form-horizontal" style="margin-left: 20px">
+  <div class="form-group">
+      <label for="CouponTitle" class="control-label col-sm-2">Coupon Title</label>
+      <div class="col-sm-6">
+          <input class="form-control" placeholder="Insert New Coupon Title"
+          [(ngModel)] = "coupon.title"
+                  type="text" id="CouponTitle" name="couponTitle" />
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="inputStartDate" class="control-label col-sm-2">StartDate</label>
+      <div class="col-sm-6">
+          <input class="form-control" placeholder="Insert StartDate"
+          [(ngModel)] = "coupon.startDate"      
+                  type="date" id="inputStartDate" name="couponStartDate"/>
+      </div>
+  </div>
+  <div class="form-group">
+      <label for="inputEndDate" class="control-label col-sm-2">EndDate</label>
+      <div class="col-sm-6">
+          <input class="form-control" placeholder="Insert EndDate"
+          [(ngModel)] = "coupon.endDate"
+                  type="date" id="inputEndDate" name="couponEndDate"/>
+      </div>
+  </div>
+  <div class="form-group">
+    <label for="inputAmount" class="control-label col-sm-2">Amount</label>
+    <div class="col-sm-6">
+        <input class="form-control" placeholder="Insert The Amount"
+        [(ngModel)] = "coupon.amount"
+                type="number" id="inputAmount" name="couponAmount"/>
+    </div>
+</div>
+<div class="form-group">
+  <label for="inputCouponType" class="control-label col-sm-2">CouponType</label>
+  <div class="col-sm-6">
+      <input type="radio" name="CouponType" value="FOOD"  [(ngModel)] = "coupon.type" > FOOD <br>
+      <input type="radio" name="CouponType" value="CAMPING" [(ngModel)] = "coupon.type" > CAMPING<br>
+      <input type="radio" name="CouponType" value="RESTURANTS"  [(ngModel)] = "coupon.type"> RESTURANTS<br>
+      <input type="radio" name="CouponType" value="ELECTRICITY"  [(ngModel)] = "coupon.type"> ELECTRICITY<br>
+      <input type="radio" name="CouponType" value="HEALTH"  [(ngModel)] = "coupon.type"> HEALTH<br>
+      <input type="radio" name="CouponType" value="SPORTS" [(ngModel)] = "coupon.type"> SPORTS<br>
+      <input type="radio" name="CouponType" value="TRAVELLING" [(ngModel)] = "coupon.type"> TRAVELLING<br>    
+  </div>
+</div>
+<div class="form-group">
+  <label for="inputMessage" class="control-label col-sm-2">Message</label>
+  <div class="col-sm-6">
+      <input class="form-control" placeholder="Insert A Message"
+      [(ngModel)] = "coupon.message"
+              type="text" id="inputMessage" name="CouponMessage"/>
+  </div>
+</div>
+<div class="form-group">
+  <label for="inputPrice" class="control-label col-sm-2">Coupon Price</label>
+  <div class="col-sm-6">
+      <input class="form-control" placeholder="Insert Price"
+      [(ngModel)] = "coupon.price"
+              type="number" id="inputPrice" name="CouponPrice"/>
+  </div>
+</div>
+<div class="form-group">
+  <label for="inputImage" class="control-label col-sm-2">Image</label>
+  <div class="col-sm-6">
+      <input class="form-control" placeholder="Insert Image"
+      [(ngModel)] = "coupon.image"
+              type="text" id="inputImage" name="CouponImage"/>
+  </div>
+</div>
+<hr>
+<div class="form-group">
+  <div class="col-sm-offset-2 col-sm-10">
+   <button  (click)="createCoupon()" class="btn btn-primary btn-lg">Create Coupon <span class="glyphicon glyphicon-plus"></span></button>
+    </div>
+</div>
+<pre>
+  {{coupon | json}}
+</pre>
+</form>

@@ -1,0 +1,48 @@
+<form class="form-horizontal" style="margin-left: 20px">
+  <div class="form-group">
+    <label for="inputCouponType" class="control-label col-sm-2">CouponType</label>
+    <div class="col-sm-6">
+      <input type="radio" name="CouponType" value="FOOD"  [(ngModel)] = "CouponType" > FOOD <br>
+      <input type="radio" name="CouponType" value="CAMPING" [(ngModel)] = "CouponType" > CAMPING<br>
+      <input type="radio" name="CouponType" value="RESTURANTS"  [(ngModel)] = "CouponType"> RESTURANTS<br>
+      <input type="radio" name="CouponType" value="ELECTRICITY"  [(ngModel)] = "CouponType"> ELECTRICITY<br>
+      <input type="radio" name="CouponType" value="HEALTH"  [(ngModel)] = "CouponType"> HEALTH<br>
+      <input type="radio" name="CouponType" value="SPORTS" [(ngModel)] = "CouponType"> SPORTS<br>
+      <input type="radio" name="CouponType" value="TRAVELLING" [(ngModel)] = "CouponType"> TRAVELLING<br>    
+    </div>
+  </div>
+</form>
+  <table style="margin-left: 10px" class="table table-striped table-bordered">
+    <thead>
+      <tr>
+        <th>Id</th>
+        <th>Title</th>
+        <th>Start Date</th>
+        <th>End Date</th>
+        <th>Amount</th>
+        <th>Coupon Type</th>
+        <th>Message</th>
+        <th>Price</th>
+        <th>Image</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let c of _coupons">
+        <td>{{c.id}}</td>
+        <td>{{c.title}}</td>
+        <td>{{c.startDate}}</td>
+        <td>{{c.endDate}}</td>
+        <td>{{c.amount}}</td>
+        <td>{{c.type}}</td>
+        <td>{{c.message}}</td>
+        <td>{{c.price}}</td>
+        <td>{{c.image}}</td>
+        </tr>
+    </tbody>
+  </table>
+<hr>
+  <div class="form-group">
+      <div class="col-sm-offset-2 col-sm-10">
+       <button (click) = "getCouponsByType()" class="btn btn-primary btn-lg">Get Coupons By Type<span class="glyphicon glyphicon-search"></span></button>
+        </div>
+  </div>

@@ -1,0 +1,15 @@
+<form class="form-horizontal" style="margin-left: 20px">
+  <div class="form-group">
+      <label for="CouponID" class="control-label col-sm-2">Coupon ID</label>
+      <div class="col-sm-6">
+          <input class="form-control" placeholder="Insert The Coupon ID"
+                  type="number" name="CouponTitle" [(ngModel)] = "idtoremove" />
+      </div>
+  </div>
+<hr>
+<div class="form-group">
+        <div class="col-sm-offset-2 col-sm-10">
+         <button (click)= "removeCoupon()" type="remove" class="btn btn-primary btn-lg">Remove <span class="glyphicon glyphicon-floppy-remove"></span></button>
+          </div>
+    </div>
+</form>
